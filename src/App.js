@@ -12,7 +12,7 @@ function App() {
       <div className="Header"><Header/></div> 
       <div className="Menu"><NavBar/> </div>
       <div className='ItemList'> <ItemListContainer /> </div>
-      <div className='greeting'><Greeting nombre={'Lucas'} /></div>
+      <div className='greeting'><Greeting nombre={'Lucas Egea'} /></div> 
 
 
     </div>
