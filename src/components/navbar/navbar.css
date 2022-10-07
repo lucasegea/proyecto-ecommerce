@@ -2,18 +2,22 @@
     border-radius: 2%;
     border-color: black;
     display: inline-flex;
-    flex-wrap: wrap;
+   
     justify-content:center;
     font-size: 25px;
     margin-left: 10px;
     margin-right: 10px;
     
+    
 }
 
 .menu .icono{
     font-size: 40px;
+    justify-content:flex-end;
 }
 
-.Menu {
+.Menu div{
     background-color: brown;
+    display: flex;
+    justify-content:space-evenly;
 }

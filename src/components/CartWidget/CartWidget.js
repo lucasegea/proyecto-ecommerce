@@ -1,10 +1,13 @@
 import React from "react";
 import { FaCartPlus } from 'react-icons/fa';
-import { render } from "@testing-library/react";
+import { useState } from "react";
 
-function CartWidget() {
+const CartWidget = () => {
+   
     return( 
-        <div> <FaCartPlus /> </div>
+        <div> <FaCartPlus /> 
+
+        </div>
     )
 }
 export default CartWidget;

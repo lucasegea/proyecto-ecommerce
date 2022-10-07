@@ -1,32 +1,34 @@
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
 import './navbar.css'
+import {Link} from 'react-router-dom';
+
 
 function Navbar() {
         const menuPrincipal = [
             {
-                    id: 1,
-                    content: 'Inicio',
-                    important: true,
-                    link: '#'
+                id: 1,
+                content: 'Inicio',
+                important: true,
+                link: '/home'
             },
             {
                 id: 2,
                 content: 'Productos',
                 important: true,
-                link: '#'
+                link: '/items'
             },
             {
                 id: 3,
                 content: 'Foro',
                 important: true,
-                link: '#'
+                link: '/'
             },
             {
                 id: 4,
                 content: CartWidget(),
                 important: true,
-                link: '#'
+                link: '/'
             }
             
 
@@ -35,12 +37,14 @@ function Navbar() {
 
       return(  
         <div>
-            {menuPrincipal.map(({link, content}) => {
-                return <a href ={link}>{content}</a>        
+            {menuPrincipal.map(({link, content, id}) => {
+            return <> <Link key={id} to={`${link}`} >{content}</Link></>
+                    
             }
             
             )}
         </div>
+        
     )
 }
 export default Navbar;

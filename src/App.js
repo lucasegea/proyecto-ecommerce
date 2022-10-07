@@ -1,21 +1,35 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
 import './style.css';
 import NavBar from './components/navbar/NavBar';
 import Header from './components/header/Header';
-import CartWidget from './components/CartWidget/CartWidget';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import { Greeting } from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './components/Containers/ItemListContainer';
+import { Greeting } from './components/Containers/ItemListContainer';
+import ProductosJson from './components/Containers/ItemDetailContainer';
+import Home from './Routes/Home';
+import ItemCount from './components/CartWidget/ItemCount';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <div className="Header"><Header/></div> 
-      <div className="Menu"><NavBar/> </div>
-      <div className='ItemList'> <ItemListContainer /> </div>
-      <div className='greeting'><Greeting nombre={'Lucas Egea'} /></div> 
+   
+     <BrowserRouter>  
+            <div className="Header"><Header/></div> 
+            <div className="Menu"><NavBar/> </div>
+           
+            
+            <Routes>
+              <Route exact path='/items' element={<ProductosJson />} />    
+              <Route exact path='/home' element={<Home />} />         
+            </Routes>
+            <Greeting nombre={'Lucas Egea'} />
+            
+          </BrowserRouter>
 
 
-    </div>
+
+  
   );
 }
 
