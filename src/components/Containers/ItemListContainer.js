@@ -1,37 +1,36 @@
 import React from "react";
-import Item from '../Item/Item';
-import {useState} from 'react';
-
-function ItemListContainer() {
-
-       const items = [
-            {
-                id: 0,
-                title: 'producto 1',
-                content: 'contenido 1',
-                link: '#',
-                image: '',
-            },
-            {
-                id: 1,
-                title: 'producto 2',
-                content: 'contenido 2',
-                link: '#',
-                image: '',
-            }
-    ]
+import { useEffect, useState } from "react";
+import ItemList from "../Item/ItemList";
+import ItemContext from '../../contexts/ItemContext';
 
 
-return (
-    <div>
-        {items.map((article) => 
-        <Item article = {article} key={article.id} />
-        )}
-    </div>
 
-)
-            
+const ProductosJson = () => {
+
+    const [consulta, setConsulta] = useState([]);
+    
+
+    useEffect(() => {
+        fetch('./products.json')
+            .then((res) => res.json())
+            .then((list) => {
+                setTimeout(() => {
+                    setConsulta(list.products);
+                }, 1000);
+            })
+    }, []);
+    return (<div> 
+        
+        <ItemContext.Provider value={{consulta, setConsulta}}>
+            <ItemList />
+        </ItemContext.Provider>
+    </div> )
+    //<div>{!producto ? <div>No existe producto </div> : <div> existe producto </div>} </div>;
 }
+
+export default ProductosJson;
+
+/*
 export default ItemListContainer;
 
 export const Greeting = ({nombre}) =>{
@@ -40,7 +39,7 @@ export const Greeting = ({nombre}) =>{
     )
 
 };
-
+*/
 
 
 

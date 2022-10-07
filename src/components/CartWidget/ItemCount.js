@@ -1,8 +1,8 @@
-import React from "react";
-import { useState } from "react";
-import CartWidget from './CartWidget';
+import React, {useState} from "react";
 
 /*El carrito funciona de manera local por cada Item y su stock. Para hacerlo global para todos los items me falta un poco de contexto*/
+
+
 
 const ItemCount = ({ stock }) => {
 

@@ -3,13 +3,12 @@ import './App.css';
 import './style.css';
 import NavBar from './components/navbar/NavBar';
 import Header from './components/header/Header';
-import ItemListContainer from './components/Containers/ItemListContainer';
-import { Greeting } from './components/Containers/ItemListContainer';
-import ProductosJson from './components/Containers/ItemDetailContainer';
+//import { Greeting } from './components/Containers/ItemListContainer';
+import ProductosJson from './components/Containers/ItemListContainer';
 import Home from './Routes/Home';
-import ItemCount from './components/CartWidget/ItemCount';
 
 
+/*  <Greeting nombre={'Lucas Egea'} />*/
 
 function App() {
   return (
@@ -23,7 +22,7 @@ function App() {
               <Route exact path='/items' element={<ProductosJson />} />    
               <Route exact path='/home' element={<Home />} />         
             </Routes>
-            <Greeting nombre={'Lucas Egea'} />
+          
             
           </BrowserRouter>
 
