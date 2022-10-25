@@ -18,32 +18,10 @@ export const ItemListContainer = () => {
         
     }
     GetDataListContainer();
-    //console.log(products)
+    
     return(<ItemList products={products}/>)
 }
 
-
-/*
-    const GetItemForId = (id) => {
-        const [product, setProduct] = useState([]);
-
-        const filteredProduct = products.filter((item) => item.products.title === "Producto 1");
-        console.log(filteredProduct)
-
-        return (<div> <Item product={product} />caca </div>)
-    }*/
-
-
-/*
-export default ItemListContainer;
-
-export const Greeting = ({nombre}) =>{
-    return(
-        <div>Saludos {nombre}</div>
-    )
-
-};
-*/
 
 
 
