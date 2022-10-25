@@ -1,15 +1,17 @@
 import React, {useState, useContext} from "react";
 import Item from "./Item";
-import ItemContext from '../../contexts/ItemContext';
+import ItemDetailsProvider from "../Item/ItemDetail"
 
 
-const ItemList = () => {
-    const {consulta} = useContext(ItemContext);
+const ItemList = ({products}) => {
+    //const {consulta} = useContext(ItemContext);
+    //const products = products;
+    
 
     return (
         <div>
-            {consulta.map((producto) => {
-                return <div><Item key={producto.id} title={producto.title} content={producto.content} image={producto.image} stock={producto.stock} /> </div>
+            {products.map((product) => {
+                return <div><Item key={product.id} product={product} /> </div>
             }
             )}
         </div>)

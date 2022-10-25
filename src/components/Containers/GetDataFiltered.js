@@ -1,25 +1,27 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import ItemList from "../Item/ItemList";
+import Item from "../Item/Item";
 
-export const ItemListContainer = () => {
-    const [products, setProducts] = useState([]);
-
+export const ItemListFiltered = () => {
+    const [product, setProduct] = useState([]);
+    
     const GetDataListContainer = () => {
         useEffect(() => {
             fetch('./products.json')
                 .then((res) => res.json())
                 .then((list) => {
                     setTimeout(() => {
-                        setProducts(list.products);
+                        setProduct(list.products);
                     }, 1000);
                 });
         }, []);
         
     }
     GetDataListContainer();
-    //console.log(products)
-    return(<ItemList products={products}/>)
+    const filteredProduct = product.filter((item) => item.products.title === "Producto 1");
+    console.log(filteredProduct)
+    setProduct(product)
+    return (<div> <Item product={product} />caca </div>)
 }
 
 
@@ -32,18 +34,3 @@ export const ItemListContainer = () => {
 
         return (<div> <Item product={product} />caca </div>)
     }*/
-
-
-/*
-export default ItemListContainer;
-
-export const Greeting = ({nombre}) =>{
-    return(
-        <div>Saludos {nombre}</div>
-    )
-
-};
-*/
-
-
-
