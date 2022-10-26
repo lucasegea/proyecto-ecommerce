@@ -1,10 +1,10 @@
 import React from "react";
 import ItemDetail from "../components/Item/ItemDetail";
+import Item from "../components/Item/Item";
 
-const ItemDetailsPage = ({id}) => {
-    //console.log(id, "caca")
+const ItemDetailsPage = ({product}) => {
 
-    return(<div> <ItemDetail />
+    return(<div> adfasd<Item product={product} />
 
     </div>)
 }

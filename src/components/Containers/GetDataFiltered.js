@@ -1,36 +1,23 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import Item from "../Item/Item";
+import React, { useEffect, useState } from "react";
+import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore';
+import ItemDetailsPage from "../../Routes/ItemDetailsPage";
 
-export const ItemListFiltered = () => {
-    const [product, setProduct] = useState([]);
-    
-    const GetDataListContainer = () => {
-        useEffect(() => {
-            fetch('./products.json')
-                .then((res) => res.json())
-                .then((list) => {
-                    setTimeout(() => {
-                        setProduct(list.products);
-                    }, 1000);
-                });
-        }, []);
-        
-    }
-    GetDataListContainer();
-    const filteredProduct = product.filter((item) => item.products.title === "Producto 1");
-    console.log(filteredProduct)
-    setProduct(product)
-    return (<div> <Item product={product} />caca </div>)
+const GetDataFiltered = (id) => {
+const [product, setProduct] = useState([]);
+
+    useEffect(() => {
+        const db = getFirestore();
+        const itemsCollection = collection(db, 'items');
+        const q = query(itemsCollection, where ('id', '=', '5smBmE65BWNg6PenivTE' ));
+        getDocs(itemsCollection).then((snapshot) => {
+        const productfiltered = snapshot.docs.map((doc) => ({
+           id: doc.id,
+           ...doc.data(),
+    }));
+    setProduct(productfiltered);
+});
+ }, []);
+ return(<ItemDetailsPage product={product}/>)
 }
 
-
-/*
-    const GetItemForId = (id) => {
-        const [product, setProduct] = useState([]);
-
-        const filteredProduct = products.filter((item) => item.products.title === "Producto 1");
-        console.log(filteredProduct)
-
-        return (<div> <Item product={product} />caca </div>)
-    }*/
+export default GetDataFiltered;

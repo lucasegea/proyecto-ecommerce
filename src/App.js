@@ -4,11 +4,8 @@ import './style.css';
 import NavBar from './components/navbar/NavBar';
 import Header from './components/header/Header';
 //import { Greeting } from './components/Containers/ItemListContainer';
-import { ItemListContainer} from './components/Containers/ItemListContainer';
+import GetItemListContainerFire from './components/Containers/GetItemContainerFirebase';
 import Home from './Routes/Home';
-import ItemDetailsProvider from './components/Item/ItemDetail';
-import { ItemListFiltered } from './components/Containers/GetDataFiltered';
-/*  <Greeting nombre={'Lucas Egea'} />*/
 
 function ProductPage() {
   let {id} =useParams();
@@ -21,9 +18,9 @@ function App() {
             <div className="Header"><Header/></div> 
             <div className="Menu"><NavBar/> </div>
             <Routes>
-              <Route exact path='/items' element={<ItemListContainer/>} />    
+              <Route exact path='/items' element={<GetItemListContainerFire />} />    
               <Route exact path='/home' element={<Home />} />              
-              <Route path='/ItemDetail/' element ={<ItemListFiltered/>} />
+              <Route path='/ItemDetail/:id' element ={<GetItemListContainerFire idToSearch="eBA9Hd3p7vyecJgQ8rgY"/>} />
             </Routes>
       </BrowserRouter>
 
