@@ -1,12 +1,11 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import ItemCount from '../CartWidget/ItemCount';
-import GetDataFiltered from '../Containers/GetDataFiltered';
 
 const Item = ({ product }) => {
     const [item, setItem] = useState(product);
     const moreInfo = (ev) => {
-        <GetDataFiltered id={item.id} />
+        //<GetDataFiltered id={item.id} />
     }
     return(
         <> 
