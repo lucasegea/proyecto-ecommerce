@@ -28,7 +28,7 @@ function Navbar() {
                 id: 4,
                 content: CartWidget(),
                 important: true,
-                link: '/'
+                link: '/cart'
             }
             
 
