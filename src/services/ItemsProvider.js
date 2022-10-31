@@ -19,7 +19,7 @@ export const GetItemFiltered = (id) => {
     const db = getFirestore();
     const itemFiltered = doc(db, 'items', id);
     const product = getDoc(itemFiltered).then((item) => {
-        const product = ([{ id: item.id, ...item.data() }]);
+        const product = ({ id: item.id, ...item.data() });
         return product;
     });
     return product;

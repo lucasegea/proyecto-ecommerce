@@ -7,19 +7,23 @@ import GetItemListContainerFire from './components/Containers/GetItemContainerFi
 import Home from './Routes/Home';
 import ItemDetails from './components/Item/ItemDetails';
 import CartPage from './Routes/Cart';
+import {CartItemProvider} from './contexts/CartContext';
 
 function App() {
+  const test = 3;
   return (
-    <BrowserRouter>
-      <div className="Header"><Header /></div>
-      <div className="Menu"><NavBar /> </div>
-      <Routes>
-        <Route exact path='/items' element={<GetItemListContainerFire />} />
-        <Route exact path='/home' element={<Home />} />
-        <Route path='/itemdetail/:id' element={<ItemDetails />} />
-        <Route path='/cart' element={<CartPage />} />
-      </Routes>
-    </BrowserRouter>
+    <CartItemProvider>
+      <BrowserRouter>
+        <div className="Header"><Header /></div>
+        <div className="Menu"><NavBar /> </div>
+        <Routes>
+          <Route exact path='/items' element={<GetItemListContainerFire />} />
+          <Route exact path='/home' element={<Home />} />
+          <Route path='/itemdetail/:id' element={<ItemDetails />} />
+          <Route path='/cart' element={<CartPage />} />
+        </Routes>
+      </BrowserRouter>
+    </CartItemProvider>
   );
 }
 
