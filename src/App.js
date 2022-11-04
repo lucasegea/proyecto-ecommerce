@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './style.css';
 import NavBar from './components/navbar/NavBar';
@@ -7,10 +7,10 @@ import GetItemListContainerFire from './components/Containers/GetItemContainerFi
 import Home from './Routes/Home';
 import ItemDetails from './components/Item/ItemDetails';
 import CartPage from './Routes/Cart';
-import {CartItemProvider} from './contexts/CartContext';
+import {CartContext, CartItemProvider} from './contexts/CartContext';
 
 function App() {
-  const test = 3;
+
   return (
     <CartItemProvider>
       <BrowserRouter>

@@ -1,25 +1,31 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../contexts/CartContext";
 import Item from "../components/Item/Item";
 
 const CartPage = () => {
-        const { itemsIdContainer, deleteItems, itemsContainer } = useContext(CartContext);
-        //const [itemCart, setItemCart] = useState[]
+        const { itemsIdContainer, deleteItems, itemsContainer, totalPrice } = useContext(CartContext);
+        const [itemCart, setItemCart] = useState();
 
-        console.log(itemsContainer)
-        
-        
-
-        return (<div> soy la webpage del chango {itemsIdContainer}
-
-                <button onClick={() => deleteItems()}> Vaciar chango</button>
+         
+        return (<div> {itemsIdContainer.length > 0? <>Tenes {itemsContainer.length} items y un total de {itemsIdContainer.length} unidad/es, en el carrito. </> : <> El chango esta vacio </>}
+                
                 <div>
+                        {itemsIdContainer.length > 0? <h1> Items en el chango </h1> : <></>}
                         {itemsContainer.map((item) => {
-                                return <div><Item key={item.id} product={item} /> </div>
-                        }
-                        )}
+                                if(itemsContainer.includes(item)){  
+                                        return <div>  
+                                                        <h1>• {item.title} - ${item.price} ({item.countExist} unidad/es)</h1>  
+                                                </div>     
+                                }                                     
+                        })}
                 </div>
-
+                <div>{itemsIdContainer.length > 0? 
+                (<div>
+                        <hr></hr>
+                        <h1>Precio Total ${totalPrice}</h1> <hr></hr>
+                        <br></br>
+                        <button onClick={() => deleteItems()}> Vaciar chango</button>
+                </div>) : <></>}</div>
         </div>);
 }
 

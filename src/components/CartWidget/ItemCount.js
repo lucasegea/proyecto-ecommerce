@@ -6,7 +6,6 @@ const ItemCount = ({id, stock}) => {
     const [articleStock, setArticleStock] = useState(0);
     const [countCart, setCountCart] = useState(0);
     const { addItemById } = useContext(CartContext);
-    //const { itemOnCart } = useContext(CartContext);
 
 
     const buttonActionHandler = (ev) => {

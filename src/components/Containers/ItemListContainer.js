@@ -19,7 +19,7 @@ export const ItemListContainer = () => {
     }
     GetDataListContainer();
     
-    return(<ItemList products={products}/>)
+    return(<ItemList products={products}/> )
 }
 
 

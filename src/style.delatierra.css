@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+
+header h1 {
+    color: rgb(232, 204, 81);
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+body .barra {
+    padding: 3%;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    word-spacing: 0.25em;
+    background-color: rgba(128, 90, 18, 0.700);
+    text-align: center;
+    border-bottom: 1px solid #555
+}
+
+
+a {
+    color: #541a8bcf;
+}
+
+a:hover {
+    color: rgba(238, 212, 17, 0.500);
+}
+
+body {
+    background-color: rgba(70, 61, 6, 0.900);
+}
+
+
+
+
+@media only screen and (min-width: 1200px) {
+
+    #nuestraTierra {
+        width: 130%;
+        transform: translateX(140%);
+        padding-top: 10%;
+
+    }
+
+    #nuestraTierra2 {
+        display: none;
+    }
+
+    #presentacion {
+
+        transform: translateX(-70%);
+        padding-top: 5%;
+        padding-left: 10%;
+        color: rgba(255, 237, 42, 0.631);
+        font-size: 1.1em;
+        font-weight: normal;
+        word-spacing: 0.25em;
+        text-align: justify;
+        font-family: 'Assistant', sans-serif;
+
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    #nuestraTierra2 {
+        width: 100%;
+        opacity: 40%;
+        padding-top: 5%;
+    }
+
+    #nuestraTierra {
+        display: none;
+    }
+
+
+    #presentacion {
+
+        width: 100%;
+        padding-top: 0%;
+        padding-left: 3%;
+        padding-right: 3%;
+        color: rgba(255, 237, 42, 0.631);
+        font-size: 1.1em;
+        font-weight: normal;
+        word-spacing: 0.25em;
+        text-align: justify;
+        font-family: 'Assistant', sans-serif;
+
+
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #nuestraTierra {
+        display: none;
+    }
+
+    #nuestraTierra2 {
+        display: none;
+    }
+
+    #presentacion {
+        width: 100%;
+        padding-right: 10%;
+        transform: none;
+        color: rgba(255, 237, 42, 0.631);
+        font-size: 1.1em;
+        font-weight: normal;
+        word-spacing: 0.25em;
+        text-align: justify;
+        font-family: 'Assistant', sans-serif;
+    }
+}
+
+
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(126, 92, 40, 0.000);
+    margin-top: 5%;
+
+
+}
+
+.flex-container div {
+
+    background-color: rgba(128, 90, 18, 0.200);
+    margin: 60px;
+    padding: 10px;
+    font-size: 30px;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+
+
+}
+
+#miel {
+    width: 200px;
+    height: 270px;
+    transition-duration: 1s;
+    margin-top: 10%;
+
+
+
+}
+
+/* transición en los productos */
+
+#miel:hover {
+    transition-duration: 1s;
+    width: 250px;
+    height: 320px;
+}
+
+#nueces {
+    width: 200px;
+    height: 270px;
+    transition-duration: 1s;
+    margin-top: 10%;
+
+
+}
+
+
+#nueces:hover {
+    transition-duration: 1s;
+    width: 250px;
+    height: 320px;
+}
+
+
+
+.contacto {
+
+    margin-top: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    color: bisque;
+    font-size: x-large;
+}
+
+h2 {
+
+
+    background-color: rgba(223, 158, 79, 0.100);
+
+}
+
+#mielpura {
+    width: 100%;
+    transform: translateX(100%);
+    padding-top: 50px;
+
+}
+
+#descripcion {
+
+    transform: translateX(50%);
+    padding-top: 5%;
+    padding-left: 10%;
+    color: rgba(255, 237, 42, 0.631);
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+
+}
+
+#icono {
+    color: rgb(51, 232, 19);
+    transform: translateX(50px);
+}
+
+#Nuecesricas {
+    width: 100%;
+    transform: translateX(100%);
+    padding-top: 50px;
+
+
+}
+
+#descripcion1 {
+
+    transform: translateX(50%);
+    padding-top: 5%;
+    padding-left: 10%;
+    color: rgba(255, 237, 42, 0.631);
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+
+}

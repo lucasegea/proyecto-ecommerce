@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import ItemCount from '../CartWidget/ItemCount';
+import { ButtonAddToCart } from '../../shared/ButtonsCart';
 
 const Item = ({ product }) => {
     const [item, setItem] = useState(product);
@@ -12,7 +12,7 @@ const Item = ({ product }) => {
                 <img src={item.image} />
                 <h2>{item.stock > 1 ? ' Stock Disponible' : 'Sin Stock'}</h2>
                 <Link to={`/itemdetail/${item.id}`}><button>Ver mas</button></Link>
-                <ItemCount id={item.id} stock={item.stock} />
+                <ButtonAddToCart id={item.id} stock={item.stock} item={item}/>
                 <hr />
             </div>
         </>
