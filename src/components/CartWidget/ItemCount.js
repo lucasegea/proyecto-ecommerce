@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import {CartContext} from '../../contexts/CartContext';
-
-
+//documento en desuso hasta refactor //
 const ItemCount = ({id, stock}) => {
     const [articleStock, setArticleStock] = useState(0);
     const [countCart, setCountCart] = useState(0);

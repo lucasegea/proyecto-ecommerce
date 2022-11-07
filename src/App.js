@@ -7,7 +7,7 @@ import GetItemListContainerFire from './components/Containers/GetItemContainerFi
 import Home from './Routes/Home';
 import ItemDetails from './components/Item/ItemDetails';
 import CartPage from './Routes/Cart';
-import {CartContext, CartItemProvider} from './contexts/CartContext';
+import {CartItemProvider} from './contexts/CartContext';
 
 function App() {
 

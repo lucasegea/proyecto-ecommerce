@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import { getFirestore, collection, getDocs, getDoc, doc } from 'firebase/firestore';
 
 export const GetItems = () => {
+
     const db = getFirestore();
     const itemsCollection = collection(db, 'items');
     const arrproducts = getDocs(itemsCollection).then((snapshot) => {

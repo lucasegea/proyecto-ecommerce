@@ -1,3 +1,5 @@
+// Documento reemplazado por consulta a firebase (GetItemContainerFirebase.js) //
+
 import React from "react";
 import { useEffect, useState } from "react";
 import ItemList from "../Item/ItemList";

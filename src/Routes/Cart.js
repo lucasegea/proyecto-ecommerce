@@ -1,11 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
-import Item from "../components/Item/Item";
 
 const CartPage = () => {
         const { itemsIdContainer, deleteItems, itemsContainer, totalPrice } = useContext(CartContext);
-        const [itemCart, setItemCart] = useState();
-
          
         return (<div> {itemsIdContainer.length > 0? <>Tenes {itemsContainer.length} items y un total de {itemsIdContainer.length} unidad/es, en el carrito. </> : <> El chango esta vacio </>}
                 
